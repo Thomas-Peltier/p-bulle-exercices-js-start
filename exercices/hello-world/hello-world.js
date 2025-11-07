@@ -3,8 +3,9 @@
 // Il t’est fourni pour te permettre de démarrer plus rapidement l’écriture du code.
 //
 
-let phrase = "Hello, World!"
+
 export function hello() {
+  let phrase = "Hello, World!"
   return phrase;
 }
 
