@@ -8,5 +8,18 @@
     "duration": 139,
     "status": "Done",
     "author": "Thomas-Peltier"
+  },
+  {
+    "id": "d7673418-0a13-4a32-a285-a0d1574778a1",
+    "type": "commitpatch",
+    "sha": "57191e881be2232df2255bad51ca80a521f1dd18",
+    "url": "https://github.com/Thomas-Peltier/p-bulle-exercices-js-start/commit/57191e881be2232df2255bad51ca80a521f1dd18",
+    "name": "feat(amusement-park) : exercice teminer",
+    "description": "",
+    "date": "2025-11-28T14:41:00.000Z",
+    "duration": 158,
+    "status": "Done",
+    "author": "Thomas-Peltier",
+    "patch": true
   }
 ]
