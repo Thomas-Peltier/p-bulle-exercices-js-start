@@ -21,5 +21,14 @@
     "status": "Done",
     "author": "Thomas-Peltier",
     "patch": true
+  },
+  {
+    "id": "b630995c-fd31-4a23-ae42-516f03be3d69",
+    "type": "commitless",
+    "name": "chore(instruction) écoute des consignes",
+    "description": "",
+    "date": "2025-12-05T13:43:00.000Z",
+    "duration": 45,
+    "status": "Done"
   }
 ]
