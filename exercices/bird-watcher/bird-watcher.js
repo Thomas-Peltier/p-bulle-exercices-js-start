@@ -3,7 +3,7 @@
 // The line above enables type checking for this file. Various IDEs interpret
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
-
+ 
 /**
  * Calculates the total bird count.
  *
@@ -11,9 +11,13 @@
  * @returns {number} total bird count
  */
 export function totalBirdCount(birdsPerDay) {
-  throw new Error('Remove this line and implement the function');
+  let total = 0
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    total += birdsPerDay[i]
+  }
+  return total
 }
-
+ 
 /**
  * Calculates the total number of birds seen in a specific week.
  *
@@ -22,9 +26,15 @@ export function totalBirdCount(birdsPerDay) {
  * @returns {number} birds counted in the given week
  */
 export function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Remove this line and implement the function');
+  let total = 0
+  const début = (week - 1) * 7;
+  const Fin = début + 7
+  for (let i = début; i < Fin; i++) {
+    total += birdsPerDay[i]
+  }
+  return total
 }
-
+ 
 /**
  * Fixes the counting mistake by increasing the bird count
  * by one for every second day.
@@ -33,5 +43,7 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Remove this line and implement the function');
-}
+  for (let i = 0; i < birdsPerDay.length; i += 2) {
+    birdsPerDay[i] += 1;
+  }
+};
