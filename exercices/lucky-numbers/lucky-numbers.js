@@ -1,5 +1,5 @@
 // @ts-check
-
+ 
 /**
  * Calculates the sum of the two input arrays.
  *
@@ -8,9 +8,11 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Remove this line and implement the function');
+  const num1 = parseInt(array1.join(""), 10);
+  const num2 = parseInt(array2.join(""), 10);
+  return num1 + num2;
 }
-
+ 
 /**
  * Checks whether a number is a palindrome.
  *
@@ -18,9 +20,11 @@ export function twoSum(array1, array2) {
  * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Remove this line and implement the function');
+  const chaincaractère = String(value);
+  const changer = chaincaractère.split("").reverse().join("");
+  return chaincaractère === changer;
 }
-
+ 
 /**
  * Determines the error message that should be shown to the user
  * for the given input value.
@@ -29,5 +33,15 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Remove this line and implement the function');
+  if (input === null || input === undefined || input.trim() === "") {
+    return "Required field";
+  }
+  if (isNaN(Number(input))) {
+    return "Must be a number besides 0";
+  }
+  if (Number(input) === 0) {
+    return "Must be a number besides 0";
+  }
+  return "";
 }
+ 
