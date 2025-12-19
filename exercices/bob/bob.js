@@ -5,20 +5,20 @@
  
 export const hey = (message) => {
  
-  const vide = message.trim()
-  const pattern = /([A-Za-z])/.test(vide)
+  const messageClaire = message.trim()
+  const testLettre = /([A-Za-z])/.test(messageClaire)
 
-  if (pattern && vide === vide.toUpperCase() && vide.endsWith("?")){
+  if (testLettre && messageClaire === messageClaire.toUpperCase() && messageClaire.endsWith("?")){
     return "Calm down, I know what I'm doing!"
  
   }
-  else if(pattern && vide === vide.toUpperCase()){
+  else if(testLettre && messageClaire === messageClaire.toUpperCase()){
     return "Whoa, chill out!"
   }
-  else if(vide.endsWith("?")){
+  else if(messageClaire.endsWith("?")){
     return "Sure."
   }
-  else if(vide === "" ){
+  else if(messageClaire === "" ){
     return "Fine. Be that way!"
   }
   else {
