@@ -1,6 +1,6 @@
 /// <reference path="./global.d.ts" />
 // @ts-check
-
+ 
 /**
  * Get the first card in the given deck
  *
@@ -9,9 +9,11 @@
  * @returns {Card} the first card in the deck
  */
 export function getFirstCard(deck) {
-  throw new Error('Implement the getFirstCard function');
+  const  [carte, ...everythingElse] = deck
+  
+  return carte
 }
-
+ 
 /**
  * Get the second card in the given deck
  *
@@ -20,9 +22,10 @@ export function getFirstCard(deck) {
  * @returns {Card} the second card in the deck
  */
 export function getSecondCard(deck) {
-  throw new Error('Implement the getSecondCard function');
+  const  [espace,carte, ...everythingElse] = deck
+  return carte
 }
-
+ 
 /**
  * Switch the position of the two cards
  *
@@ -31,9 +34,10 @@ export function getSecondCard(deck) {
  * @returns {[Card, Card]} new deck with the 2 cards swapped
  */
 export function swapTwoCards(deck) {
-  throw new Error('Implement the swapTopTwoCards function');
+  const  [espace,carte] = deck
+  return [carte,espace]
 }
-
+ 
 /**
  * Rotate (shift) the position of the three cards (by one place)
  *
@@ -42,9 +46,10 @@ export function swapTwoCards(deck) {
  * @returns {[Card, Card, Card]} new deck with the 3 cards shifted by one position
  */
 export function shiftThreeCardsAround(deck) {
-  throw new Error('Implement the discardTopCard function');
+  const  [carte0,carte1,carte2] = deck
+  return [carte1,carte2,carte0]
 }
-
+ 
 /**
  * Grab the chosen pile from the available piles
  *
@@ -54,9 +59,10 @@ export function shiftThreeCardsAround(deck) {
  */
 export function pickNamedPile(piles) {
   // 🚨 Do NOT use piles.chosen or piles.disregarded.
-  throw new Error('Implement the pickNamedPile function');
+  const { chosen } = piles
+  return chosen
 }
-
+ 
 /**
  * Swap the chosen pile for the disregarded pile and the disregarded pile for the chosen pile
  *
@@ -67,5 +73,6 @@ export function swapNamedPile(piles) {
   // 🪄 Don't break the magic.
   // 🚨 Do NOT use piles.chosen or piles.disregarded.
   // 🚨 Do NOT touch the next line or Elyse will accidentally reveal the trick.
-  return { chosen, disregarded };
+  const { chosen, disregarded } = piles
+  return { chosen: disregarded, disregarded: chosen }
 }
