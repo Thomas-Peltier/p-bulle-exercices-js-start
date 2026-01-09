@@ -2,35 +2,57 @@
 // This is only a SKELETON file for the 'Bank Account' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
-
+ 
 export class BankAccount {
+ 
+  NBargent
+  ouvert
+ 
   constructor() {
-    throw new Error('Remove this line and implement the function');
+    this.NBargent = 0
+    this.ouvert = false
   }
-
+ 
   open() {
-    throw new Error('Remove this line and implement the function');
+    if (this.ouvert) {
+      throw new ValueError()
+    }
+    this.NBargent = 0
+    this.ouvert = true
   }
-
+ 
   close() {
-    throw new Error('Remove this line and implement the function');
+    if (!this.ouvert) {
+      throw new ValueError()
+    }
+    this.ouvert = false
   }
-
-  deposit() {
-    throw new Error('Remove this line and implement the function');
+ 
+  deposit(NBdepot) {
+    if (!this.ouvert || NBdepot < 0) {
+      throw new ValueError()
+    }
+    this.NBargent += NBdepot
   }
-
-  withdraw() {
-    throw new Error('Remove this line and implement the function');
+ 
+  withdraw(NBretrait) {
+    if (!this.ouvert || NBretrait < 0 || NBretrait > this.NBargent) {
+      throw new ValueError()
+    }
+    this.NBargent -= NBretrait
   }
-
+ 
   get balance() {
-    throw new Error('Remove this line and implement the function');
+    if (!this.ouvert) {
+      throw new ValueError()
+    }
+    return this.NBargent
   }
 }
-
+ 
 export class ValueError extends Error {
   constructor() {
-    super('Bank account error');
+    super('Bank account error')
   }
 }
+ 
