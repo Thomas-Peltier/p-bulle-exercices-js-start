@@ -1,15 +1,15 @@
 /// <reference path="./global.d.ts" />
 // @ts-check
-
+ 
 /**
  * Creates a new score board with an initial entry.
  *
  * @returns {Record<string, number>} new score board
  */
 export function createScoreBoard() {
-  throw new Error('Remove this line and implement the function');
+  return { 'The Best Ever': 1000000 }
 }
-
+ 
 /**
  * Adds a player to a score board.
  *
@@ -19,9 +19,10 @@ export function createScoreBoard() {
  * @returns {Record<string, number>} updated score board
  */
 export function addPlayer(scoreBoard, player, score) {
-  throw new Error('Remove this line and implement the function');
+  scoreBoard[player] = score
+  return scoreBoard
 }
-
+ 
 /**
  * Removes a player from a score board.
  *
@@ -30,9 +31,12 @@ export function addPlayer(scoreBoard, player, score) {
  * @returns {Record<string, number>} updated score board
  */
 export function removePlayer(scoreBoard, player) {
-  throw new Error('Remove this line and implement the function');
+  if (player in scoreBoard) {
+    delete scoreBoard[player]
+  }
+  return scoreBoard
 }
-
+ 
 /**
  * Increases a player's score by the given amount.
  *
@@ -42,9 +46,12 @@ export function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 export function updateScore(scoreBoard, player, points) {
-  throw new Error('Remove this line and implement the function');
+  if (player in scoreBoard) {
+    scoreBoard[player] += points
+  }
+  return scoreBoard
 }
-
+ 
 /**
  * Applies 100 bonus points to all players on the board.
  *
@@ -52,5 +59,9 @@ export function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 export function applyMondayBonus(scoreBoard) {
-  throw new Error('Remove this line and implement the function');
+  for (const player in scoreBoard) {
+    scoreBoard[player] += 100
+  }
+  return scoreBoard
 }
+ 
