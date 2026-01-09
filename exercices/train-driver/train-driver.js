@@ -3,7 +3,7 @@
 // The line above enables type checking for this file. Various IDEs interpret
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
-
+ 
 /**
  * Return each wagon's id in form of an array.
  *
@@ -13,7 +13,7 @@
 export function getListOfWagons(...ids) {
   return ids
 }
-
+ 
 /**
  * Reorder the array of wagons by moving the first 2 wagons to the end of the array.
  *
@@ -22,10 +22,10 @@ export function getListOfWagons(...ids) {
  */
 export function fixListOfWagons(ids) {
   const [vagon1, vagon2, ...everythinElse] = ids
-
+ 
   return [...everythinElse ,vagon1,vagon2]
 }
-
+ 
 /**
  * Fixes the array of wagons by inserting an array of wagons after the first element in eachWagonsID.
  *
@@ -35,14 +35,14 @@ export function fixListOfWagons(ids) {
  */
 export function correctListOfWagons(ids, missingWagons) {
   const [vagonInsert, ...everythingElse] = ids
-
+ 
   const [...vagonManquant] = missingWagons
-
+ 
   return [vagonInsert, ...vagonManquant, ...everythingElse]
-
-
+ 
+ 
 }
-
+ 
 /**
  * Extend route information by adding another object
  *
@@ -51,9 +51,10 @@ export function correctListOfWagons(ids, missingWagons) {
  * @returns {Record<string, string>} extended route information
  */
 export function extendRouteInformation(information, additional) {
-  
+  const InfoEtendu = { ...information, ...additional }
+  return InfoEtendu
 }
-
+ 
 /**
  * Separate arrival time from the route information object
  *
@@ -61,5 +62,6 @@ export function extendRouteInformation(information, additional) {
  * @returns {[string, Record<string, string>]} array with arrival time and object without arrival time
  */
 export function separateTimeOfArrival(information) {
-  throw new Error('Remove this line and implement the function');
+  const { timeOfArrival, ...everythingElse } = information
+  return [timeOfArrival, everythingElse]
 }
