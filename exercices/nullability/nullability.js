@@ -3,7 +3,7 @@
 // The line above enables type checking for this file. Various IDEs interpret
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
-
+ 
 /**
  * Determines the text to print on a badge
  *
@@ -14,5 +14,13 @@
  * @returns {string} the text to print on the badge
  */
 export function printBadge(id, name, department) {
-  throw new Error('Remove this line and implement the function');
+  //si département null mettre OWNER si vrai mettre le nom en majuscule
+  const nomDepartement = department === null ? 'OWNER' : department.toUpperCase()
+ 
+  if (id !== null) {
+    return `[${id}] ${name} - ${nomDepartement}`
+  } else {
+    return `${name} - ${nomDepartement}`
+  }
 }
+ 
