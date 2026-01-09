@@ -11,19 +11,19 @@
  * @returns {number} time in minutes
  */
 export function timeToMixJuice(name) {
-  switch(name){
+  switch (name) {
     case "Pure Strawberry Joy":
-      return 0.5
+      return 0.5;
     case "Energizer":
-      return 1.5
+      return 1.5;
     case "Green Garden":
-      return 1.5
+      return 1.5;
     case "Tropical Island":
-      return 3
+      return 3;
     case "All or Nothing":
-      return 5
-    default :
-      return 2.5
+      return 5;
+    default:
+      return 2.5;
   }
 }
 
@@ -37,43 +37,39 @@ export function timeToMixJuice(name) {
  */
 export function limesToCut(wedgesNeeded, limes) {
   let nbtranches = 0;
-  let citronCouper = 0
-  let i = 0
+  let citronCouper = 0;
+  let i = 0;
 
-  if(limes.length == 0){
-    return 0
+  if (limes.length == 0) {
+    return 0;
   }
-  while(nbtranches < wedgesNeeded){
-    if(limes.length == 0){
-      break
-    }
-    else if(limes[i] == "small"){
-        citronCouper += 1
-        nbtranches += 6
-        i++
-        if (i == limes.length){
-          break
-        }
-    }
-    else if(limes[i] == "medium"){
-        citronCouper += 1
-        nbtranches += 8
-        i++
-        if (i == limes.length){
-          break
-        }
-        
-    }
-    else if(limes[i] == "large"){
-        citronCouper += 1
-        nbtranches += 10
-        i++
-        if (i == limes.length){
-          break
-        }
+  while (nbtranches < wedgesNeeded) {
+    if (limes.length == 0) {
+      break;
+    } else if (limes[i] == "small") {
+      citronCouper += 1;
+      nbtranches += 6;
+      i++;
+      if (i == limes.length) {
+        break;
+      }
+    } else if (limes[i] == "medium") {
+      citronCouper += 1;
+      nbtranches += 8;
+      i++;
+      if (i == limes.length) {
+        break;
+      }
+    } else if (limes[i] == "large") {
+      citronCouper += 1;
+      nbtranches += 10;
+      i++;
+      if (i == limes.length) {
+        break;
+      }
     }
   }
-  return citronCouper
+  return citronCouper;
 }
 
 /**
@@ -84,9 +80,9 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  while (timeLeft > 0){
-    timeLeft -= timeToMixJuice(orders[0])
-    orders.shift()
+  while (timeLeft > 0) {
+    timeLeft -= timeToMixJuice(orders[0]);
+    orders.shift();
   }
-  return orders
+  return orders;
 }
