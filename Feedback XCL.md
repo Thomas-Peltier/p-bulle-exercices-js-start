@@ -13,3 +13,8 @@
   - J'ai peur que le Temps à disposition lors de la dernière séance, ne suffise pas à faire les exercices nécessaires pour atteindre le niveau 50. Il vous faut y consacrer du temps avant cela pour assurer le coup.
   - Il vous faut également bien réviser en vue du deuxième test dans lequel vous devez cartonner.
   - Continuez dans le sens de la progression et ça va le faire.
+
+
+## Final
+
+- Voir grille
